@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTask - Colorful To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="todo-container">
+        <header class="app-header">
+            <h1><i class="fas fa-tasks"></i> To-Do List</h1>
+            
+        </header>
+        
+        <div class="task-input">
+            <input type="text" id="task-text" placeholder="What needs to be done?">
+            <select id="task-category" class="colorful-select">
+                <option value="General">General</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Health">Health</option>
+            </select>
+            <input type="date" id="task-date" class="colorful-date">
+            <select id="task-priority" class="colorful-select">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <button id="add-task" class="primary-btn"><i class="fas fa-plus"></i> Add</button>
+        </div>
+        
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="search-task" placeholder="Search tasks...">
+        </div>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <span class="progress-text">Progress: <span id="progress-count">0/0</span> tasks</span>
+        </div>
+        
+        <ul id="task-list"></ul>
+        
+        <div class="actions">
+            <button id="clear-completed" class="secondary-btn"><i class="fas fa-trash-alt"></i> Clear Completed</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
